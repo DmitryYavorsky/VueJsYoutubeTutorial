@@ -4,7 +4,6 @@
       <component v-bind:is="layout"/>
     </keep-alive>
     <router-view />
-    
   </div>
 </template>
 
