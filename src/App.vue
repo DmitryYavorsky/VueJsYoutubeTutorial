@@ -1,15 +1,14 @@
 <template>
   <div id="app">
-    <keep-alive>
-      <component v-bind:is="layout"/>
-    </keep-alive>
-    <router-view />
+    <component v-bind:is="layout">
+      <router-view />
+    </component>
   </div>
 </template>
 
 <script>
-import EmptyLayout from "@/layouts/EmptyLayout"
-import MainLayout from "@/layouts/MainLayout"
+import EmptyLayout from "@/layouts/EmptyLayout";
+import MainLayout from "@/layouts/MainLayout";
 export default {
   computed: {
     layout() {
@@ -20,7 +19,7 @@ export default {
     EmptyLayout,
     MainLayout
   }
-}
+};
 </script>
 <style lang="scss">
 @import "~materialize-css/dist/css/materialize.min.css";
